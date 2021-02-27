@@ -1,0 +1,84 @@
+@use './variables';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: variables.$font-family;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+main {
+	height: auto;
+	height: 100%;
+}
+
+.outer-container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1440px;
+}
+
+.inner-container {
+	width: 100%;
+	max-width: 112rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// Buttons
+.btn {
+	padding: 1.4rem 4rem;
+	border: none;
+	border-radius: 2.8rem;
+	cursor: pointer;
+	font-family: variables.$font-family;
+	font-weight: variables.$fw-bold;
+	font-size: variables.$fsz-s;
+	line-height: variables.$lh-s;
+	transition: $transition;
+}
+
+.btn-1 {
+	@extend .btn;
+	background: variables.$blue;
+	color: variables.$wight;
+
+	&:hover {
+		background: variables.$light-blue;
+	}
+}
+
+.btn-2 {
+	@extend .btn;
+	background: rgba(variables.$blue, 0.15);
+	color: variables.$blue;
+
+	&:hover {
+		background: rgba(variables.$blue, 0.25);
+	}
+}
+
+.btn-3 {
+	@extend .btn;
+	background: variables.$wight;
+	color: variables.$blue;
+
+	&:hover {
+		color: variables.$light-blue;
+	}
+}

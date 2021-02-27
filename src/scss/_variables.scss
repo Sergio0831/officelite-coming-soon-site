@@ -1,0 +1,62 @@
+// Colors
+$blue: #5175ff;
+$light-blue: #829cff;
+$black: #25293a;
+$dark-gray: #333950;
+$gray: #747b95;
+$very-light-gray: #fafafa;
+$light-red: #f05b5b;
+$wight: #fff;
+
+// Typography
+$font-family: 'Kumbh Sans', sans-serif;
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fsz-s: 1.6rem;
+$fsz-m: 1.8rem;
+$fsz-l: 2rem;
+$fsz-xl: 5.6rem;
+
+$lh-s: 2.8rem;
+$lh-m: 4.8rem;
+$lh-l: 6.4rem;
+
+// Transition
+$transition: all 0.2s ease;
+
+@mixin H1 {
+	font-family: $font-family;
+	font-weight: $fw-bold;
+	font-size: $fsz-xl;
+	line-height: $lh-l;
+}
+
+@mixin H2 {
+	font-family: $font-family;
+	font-weight: $fw-bold;
+	font-size: $fsz-l;
+	line-height: $lh-s;
+}
+
+@mixin H3 {
+	font-family: $font-family;
+	font-weight: $fw-bold;
+	font-size: $fsz-s;
+	line-height: $lh-m;
+	text-transform: uppercase;
+}
+
+@mixin body-1 {
+	font-family: $font-family;
+	font-weight: $fw-regular;
+	font-size: $fsz-m;
+	line-height: $lh-s;
+}
+
+@mixin body-2 {
+	font-family: $font-family;
+	font-weight: $fw-regular;
+	font-size: $fsz-s;
+	line-height: $lh-s;
+}

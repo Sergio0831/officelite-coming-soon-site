@@ -1,0 +1,38 @@
+.section {
+	position: relative;
+	background: $very-light-gray;
+	background-image: url(../../assets/home/bg-pattern-header.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100% + 28rem) calc(100% - 15rem);
+	height: 100%;
+
+	&__content {
+		padding-top: 21rem;
+	}
+
+	&__content-heading {
+		@include H1;
+
+		color: $dark-gray;
+	}
+
+	&__content-p {
+		padding: 2.4rem 0 3.2rem;
+		@include body-1;
+
+		color: $gray;
+	}
+
+	a {
+		box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
+	}
+
+	&__content-image {
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
