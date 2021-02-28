@@ -1,38 +1,42 @@
 .section {
-	position: relative;
-	background: $very-light-gray;
-	background-image: url(../../assets/home/bg-pattern-header.svg);
-	background-repeat: no-repeat;
-	background-position: calc(100% + 28rem) calc(100% - 15rem);
-	height: 100%;
+  position: relative;
+  height: 100%;
+  background: $very-light-gray;
 
-	&__content {
-		padding-top: 21rem;
-	}
+  .outer-container {
+    background-image: url("../../assets/home/bg-pattern-header.svg");
+    background-position: bottom 10rem right -35rem;
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
 
-	&__content-heading {
-		@include H1;
+  &__content {
+    padding-top: 21rem;
+  }
 
-		color: $dark-gray;
-	}
+  &__content-heading {
+    @include H1;
 
-	&__content-p {
-		padding: 2.4rem 0 3.2rem;
-		@include body-1;
+    color: $dark-gray;
+  }
 
-		color: $gray;
-	}
+  &__content-p {
+    @include body-1;
 
-	a {
-		box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
-	}
+    padding: 2.4rem 0 3.2rem;
+    color: $gray;
+  }
 
-	&__content-image {
-		width: 100%;
+  a {
+    box-shadow: 0 2.4rem 2.4rem -1rem rgba(63, 91, 194, 0.24716);
+  }
 
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
+  &__content-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

@@ -1,0 +1,59 @@
+.card {
+  border-radius: 1.3rem;
+  padding: 4rem 0;
+  box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.24716);
+  text-align: center;
+  background: $wight;
+
+  &__title {
+    @include H2;
+
+    margin-bottom: 4rem;
+    color: $dark-gray;
+  }
+
+  &__price {
+    margin-bottom: 5.6rem;
+
+    .price {
+      @include H1;
+
+      color: $dark-gray;
+
+      &__description {
+        @include body-1;
+
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    margin-bottom: 3.2rem;
+    row-gap: 1.6rem;
+
+    &-item {
+      @include body-2;
+
+      color: $gray;
+    }
+  }
+
+  .btn-1:hover {
+    background: rgba($blue, 0.35);
+  }
+
+  &:nth-child(2) {
+    background: $blue;
+    background-image: url("../../assets/home/bg-pattern-pricing.svg");
+    background-position: bottom;
+
+    .card__title,
+    .price,
+    .price__description,
+    .card__list-item {
+      color: $wight;
+    }
+  }
+}
