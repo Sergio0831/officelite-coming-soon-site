@@ -1,0 +1,27 @@
+.timer {
+  &__title {
+    @include H3;
+
+    color: $wight;
+  }
+
+  &__content {
+    column-gap: 1.6rem;
+  }
+
+  &__box {
+    border-radius: 1.3rem;
+    padding: 1.6rem 1.3rem 1.8rem 1.7rem;
+    text-align: center;
+    color: $wight;
+    background: #333950;
+
+    h3 {
+      @include H1;
+    }
+
+    span {
+      @include body-2;
+    }
+  }
+}

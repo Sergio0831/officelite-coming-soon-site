@@ -1,7 +1,11 @@
-footer {
+.footer {
   height: 60rem;
   background: $black;
   background-image: url("../../assets/home/bg-pattern-footer.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  &__content {
+    padding-top: 34rem;
+  }
 }

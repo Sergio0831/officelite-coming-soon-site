@@ -11,7 +11,12 @@
   }
 
   &__content {
+    column-gap: 9.5rem;
     padding-top: 21rem;
+
+    &-text {
+      max-width: 54rem;
+    }
   }
 
   &__content-heading {

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import charts from "../assets/home/charts.svg";
 import Pricing from "./Pricing";
+import TextContent from "./TextContent";
 
 const Section = () => {
   return (
@@ -9,14 +10,12 @@ const Section = () => {
       <div className="outer-container">
         <div className="section__content row inner-container">
           <div className="section__content-text">
-            <h1 className="section__content-heading">
-              A simple solution to complex tasks is coming soon
-            </h1>
-            <p className="section__content-p">
-              Say goodbye to inefficient juggling of multiple apps, teams, and
-              projects. Officelite is the new collaboration platform built with
-              an intuitive interface to improve productivity.
-            </p>
+            <TextContent
+              heading="A simple solution to complex tasks is coming soon"
+              paragraph="Say goodbye to inefficient juggling of multiple apps, teams, and
+        projects. Officelite is the new collaboration platform built with an
+        intuitive interface to improve productivity."
+            />
             <Link to="/signup" className="btn-1">
               Get Started
             </Link>
