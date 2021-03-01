@@ -1,0 +1,92 @@
+.select-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+  width: 100%;
+
+  .options-container {
+    position: absolute;
+    top: 50%;
+    order: 1;
+    border: 0.1rem solid rgba($dark-gray, 0.2);
+    border-radius: 0.8rem;
+    padding: 2.4rem 3.2rem;
+    max-width: 46rem;
+    box-shadow: $shadow;
+    background: $wight;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: $transition;
+
+    .active {
+      max-height: 20rem;
+      opacity: 1;
+    }
+  }
+
+  .selected {
+    @include body-2;
+
+    position: relative;
+    order: 0;
+    border-bottom: 0.1rem solid rgba($gray, 0.55);
+    padding: 0 1.6rem 1.7rem;
+    font-weight: $fw-bold;
+    color: $dark-gray;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 2.4rem;
+      top: 1.2rem;
+      width: 1.1rem;
+      height: 100%;
+      background: url("../../assets/sign-up/icon-arrow-down.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: $transition;
+    }
+
+    span {
+      opacity: 0.4;
+    }
+  }
+
+  .option {
+    @include body-2;
+
+    margin-bottom: 1.6rem;
+    border-bottom: 0.1rem solid rgba($gray, 0.25);
+    padding-bottom: 1.6rem;
+    font-weight: $fw-bold;
+    color: $dark-gray;
+
+    span {
+      opacity: 0.4;
+    }
+
+    .radio {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      clip: rect(0 0 0 0);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .options-container.active + .selected::after {
+    top: -0.6rem;
+    transform: rotateX(180deg);
+  }
+}

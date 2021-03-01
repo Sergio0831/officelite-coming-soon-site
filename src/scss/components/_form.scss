@@ -1,0 +1,41 @@
+.signup-form {
+  border-radius: 1.3rem;
+  padding: 4rem 3.2rem;
+  max-width: 46rem;
+  box-shadow: $shadow;
+  background: $wight;
+
+  input,
+  select {
+    @include body-2;
+
+    margin-bottom: 2.4rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid rgba($gray, 0.5);
+    padding: 0 1.6rem 1.7rem;
+    width: 100%;
+  }
+
+  input {
+    color: $dark-gray;
+  }
+
+  input::placeholder {
+    color: rgba($gray, 0.5);
+  }
+
+  select {
+    font-weight: $fw-bold;
+    color: $dark-gray;
+  }
+
+  .select {
+    margin-bottom: 2.4rem;
+  }
+
+  button {
+    margin-top: 2.6rem;
+    width: 100%;
+  }
+}
