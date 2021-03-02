@@ -1,0 +1,66 @@
+.custom-select {
+  position: relative;
+
+  &__button {
+    @include body-2;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid rgba($gray, 0.5);
+    padding: 0 1.6rem 1.7rem;
+    width: 100%;
+    font-weight: $fw-bold;
+    color: $dark-gray;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+      opacity: 0.4;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 5.5rem;
+    border: 1px solid rgba($dark-gray, 0.15);
+    border-radius: 0.8rem;
+    padding: 2.4rem 3.2rem;
+    width: 100%;
+    box-shadow: $shadow;
+    background: $wight;
+  }
+
+  &__list {
+    @include body-2;
+
+    li {
+      margin-bottom: 1.6rem;
+      border-bottom: 1px solid rgba(116, 123, 149, 0.25);
+      padding-bottom: 1.6rem;
+      font-weight: $fw-bold;
+      transition: $transition;
+      cursor: pointer;
+
+      span {
+        opacity: 0.4;
+      }
+
+      &:hover {
+        &::after {
+          content: url("../../assets/sign-up/icon-check.svg");
+          position: absolute;
+          right: 4rem;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

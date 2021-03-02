@@ -5,8 +5,7 @@
   box-shadow: $shadow;
   background: $wight;
 
-  input,
-  select {
+  input {
     @include body-2;
 
     margin-bottom: 2.4rem;
@@ -15,9 +14,6 @@
     border-bottom: 0.1rem solid rgba($gray, 0.5);
     padding: 0 1.6rem 1.7rem;
     width: 100%;
-  }
-
-  input {
     color: $dark-gray;
   }
 
@@ -25,38 +21,12 @@
     color: rgba($gray, 0.5);
   }
 
-  select {
-    appearance: none;
-    font-weight: $fw-bold;
-    color: $dark-gray;
-    background-image: url("../../assets/sign-up/icon-arrow-down.svg");
-    background-position: top 1rem right 2.4rem;
-    background-repeat: no-repeat;
-    cursor: pointer;
-  }
-
-  select::-ms-expand {
-    display: none;
-  }
-
-  .select {
-    margin-bottom: 2.4rem;
-  }
-
-  button {
+  .btn-submit {
     margin-top: 2.6rem;
     width: 100%;
   }
 
   .error {
     color: #f05b5b;
-  }
-
-  .show {
-    display: block;
-  }
-
-  .hide {
-    display: none;
   }
 }

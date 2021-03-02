@@ -45,7 +45,7 @@ const Timer = ({ titlecolor, boxcolor, spancolor, color }) => {
     <>
       <div className="timer">
         <h3 className="timer__title">
-          <span style={{ color: titlecolor }}>Coming</span> 4 Nov 2020
+          <span style={{ color: titlecolor }}>Coming</span> 4 Nov 2021
         </h3>
         <div className="timer__content">
           <div
