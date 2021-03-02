@@ -6,7 +6,7 @@ const Timer = ({ titlecolor, boxcolor, spancolor, color }) => {
   const [hours, setHours] = useState("00");
   const [days, setDays] = useState("00");
 
-  let interval = useRef();
+  let interval = useRef(false);
 
   const startTimer = () => {
     const countDate = new Date("May 22, 2021 00:00:00").getTime();
@@ -34,8 +34,11 @@ const Timer = ({ titlecolor, boxcolor, spancolor, color }) => {
   };
 
   useEffect(() => {
+    const current = (interval.current = true);
     startTimer();
-    return () => {};
+    return () => {
+      clearInterval(current);
+    };
   }, []);
 
   return (
