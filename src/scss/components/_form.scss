@@ -26,8 +26,17 @@
   }
 
   select {
+    appearance: none;
     font-weight: $fw-bold;
     color: $dark-gray;
+    background-image: url("../../assets/sign-up/icon-arrow-down.svg");
+    background-position: top 1rem right 2.4rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  select::-ms-expand {
+    display: none;
   }
 
   .select {
@@ -37,5 +46,17 @@
   button {
     margin-top: 2.6rem;
     width: 100%;
+  }
+
+  .error {
+    color: #f05b5b;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
   }
 }

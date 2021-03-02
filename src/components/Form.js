@@ -1,51 +1,82 @@
 import React, { useState } from "react";
-import Select from "./Select";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [company, setCompany] = useState("");
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+  });
+
+  const inputEvent = (e) => {
+    const { name, value } = e.target;
+
+    setData((preVal) => {
+      return {
+        ...preVal,
+        [name]: value,
+      };
+    });
+  };
+
+  const pattern = new RegExp(
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  );
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+
+    setData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+    });
+  };
 
   return (
     <div className="signup-form">
-      <form>
+      <form onSubmit={formSubmit} id="form">
         <label htmlFor="name"></label>
         <input
-          value={name}
+          value={data.name}
           type="text"
           name="name"
           placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-          required
+          onChange={inputEvent}
         />
         <label htmlFor="email"></label>
-        <input
-          value={email}
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <Select />
+        <div className="email">
+          <input
+            id="email"
+            value={data.email}
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            className={!pattern.test(data.email) ? "error" : ""}
+            onChange={inputEvent}
+          />
+        </div>
+        <select name="packs" id="packs">
+          <option value="basic">Basic Pack Free</option>
+          <option value="pro">Pro Pack $9.99</option>
+          <option value="basic">Ultimate Pack $19.99</option>
+        </select>
         <label htmlFor="phone"></label>
         <input
-          value={phone}
+          value={data.phone}
           type="tel"
           name="phone"
           placeholder="Phone"
-          onChange={(e) => setPhone(e.target.value)}
-          required
+          onChange={inputEvent}
         />
         <label htmlFor="company"></label>
         <input
-          value={company}
+          value={data.company}
           type="text"
           name="company"
           placeholder="Company"
-          onChange={(e) => setCompany(e.target.value)}
-          required
+          onChange={inputEvent}
         />
         <button type="submit" className="btn-1">
           Get on the list

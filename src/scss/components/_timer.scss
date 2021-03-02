@@ -2,10 +2,11 @@
   &__title {
     @include H3;
 
-    color: $wight;
+    color: $blue;
   }
 
   &__content {
+    display: flex;
     column-gap: 1.6rem;
   }
 
@@ -14,8 +15,6 @@
     padding: 1.7rem 0;
     width: 10rem;
     text-align: center;
-    color: $wight;
-    background: #333950;
 
     h3 {
       @include H1;
@@ -23,6 +22,8 @@
 
     span {
       @include body-2;
+
+      font-weight: $fw-bold;
     }
   }
 }
