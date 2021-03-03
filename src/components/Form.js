@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CustomSelect from "./CustomSelect";
 
 const Form = () => {
   const [data, setData] = useState({
@@ -44,6 +45,7 @@ const Form = () => {
           name="name"
           placeholder="Name"
           onChange={inputEvent}
+          required
         />
         <label htmlFor="email"></label>
         <div className="email">
@@ -55,39 +57,10 @@ const Form = () => {
             placeholder="Email Address"
             className={!pattern.test(data.email) ? "error" : ""}
             onChange={inputEvent}
+            required
           />
         </div>
-        <div className="custom-select">
-          <button type="button" className="custom-select__button">
-            <p>
-              Basic Pack <span>Free</span>
-            </p>
-            <div className="custom-select__carret">
-              <svg width="13" height="8" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  stroke="#5175FF"
-                  strokeWidth="2"
-                  d="M1 1l5.5 5.5L12 1"
-                  fill="none"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </div>
-          </button>
-          <div className="custom-select__options">
-            <ul className="custom-select__list">
-              <li>
-                Basic Pack <span>Free</span>
-              </li>
-              <li>
-                Pro Pack <span>$9.99</span>
-              </li>
-              <li>
-                Ultimate Pack <span>$19.99</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <CustomSelect />
         <label htmlFor="phone"></label>
         <input
           value={data.phone}
@@ -95,6 +68,7 @@ const Form = () => {
           name="phone"
           placeholder="Phone"
           onChange={inputEvent}
+          required
         />
         <label htmlFor="company"></label>
         <input
@@ -103,6 +77,7 @@ const Form = () => {
           name="company"
           placeholder="Company"
           onChange={inputEvent}
+          required
         />
         <button type="submit" className="btn-1 btn-submit">
           Get on the list

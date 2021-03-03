@@ -22,6 +22,10 @@
     }
   }
 
+  &__carret {
+    transition: $transition;
+  }
+
   &__options {
     position: absolute;
     top: 5.5rem;
@@ -31,6 +35,7 @@
     width: 100%;
     box-shadow: $shadow;
     background: $wight;
+    transition: $transition;
   }
 
   &__list {
