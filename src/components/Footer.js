@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="footer">
       <div className="outer-container">
         <div className="inner-container">
-          <div className="footer__content row">
+          <div className="footer__content">
             <Timer
               titlecolor={"#fff"}
               boxcolor={"#333950"}

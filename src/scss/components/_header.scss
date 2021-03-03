@@ -1,7 +1,18 @@
 header {
-	position: absolute;
-	top: 8rem;
-	left: 0;
-	right: 0;
-	z-index: 5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8rem;
+  z-index: 5;
+
+  @include large {
+    top: 7rem;
+  }
+
+  @include small {
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

@@ -1,11 +1,24 @@
 .footer {
-  height: 60rem;
   background: $black;
   background-image: url("../../assets/home/bg-pattern-footer.svg");
   background-position: center;
   background-repeat: no-repeat;
 
   &__content {
-    padding-top: 34rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34rem 0 9rem;
+  }
+
+  @include medium {
+    background-position: top -30rem center;
+
+    &__content {
+      flex-direction: column;
+      padding-top: 60rem;
+      text-align: center;
+      row-gap: 4.8rem;
+    }
   }
 }

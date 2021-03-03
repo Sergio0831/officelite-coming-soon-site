@@ -2,14 +2,22 @@ main {
   display: flex;
   align-items: center;
   height: 100rem;
+  background: $very-light-gray;
 
   .main {
     width: 70%;
     height: 100%;
 
-    @media screen and (max-width: 800px) {
+    @include large {
       width: 100%;
       height: 70%;
+    }
+
+    @include small {
+      background-image: url("../../assets/home/bg-pattern-header.svg");
+      background-position: center top -40%;
+      background-size: 50rem 50rem;
+      background-repeat: no-repeat;
     }
   }
 
@@ -18,8 +26,33 @@ main {
     left: 50%;
     top: 24rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     transform: translateX(-50%);
+
+    .section__content-text {
+      max-width: 57rem;
+    }
+
+    .section__content-p {
+      padding-bottom: 4rem;
+    }
+
+    @include large {
+      top: 20rem;
+      flex-direction: column;
+      text-align: center;
+      row-gap: 10rem;
+
+      .section__content-text {
+        margin: 0 auto;
+        max-width: 57rem;
+
+        .timer__content {
+          justify-content: center;
+        }
+      }
+    }
   }
 
   .side {
@@ -30,13 +63,32 @@ main {
     background-repeat: no-repeat;
     background-color: $black;
 
-    @media screen and (max-width: 800px) {
+    @include large {
       width: 100%;
       height: 30%;
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @include large {
     flex-direction: column;
+  }
+
+  @include large {
+    height: 130rem;
+  }
+
+  @include small {
+    .page-content {
+      top: 15.6rem;
+
+      .section__content-text {
+        max-width: 100%;
+      }
+    }
+
+    .side {
+      background-position: 50% 40%;
+      background-size: 110rem 110rem;
+    }
   }
 }

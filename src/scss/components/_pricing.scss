@@ -2,7 +2,13 @@
   display: grid;
   column-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: -15rem;
+  margin-top: -8rem;
   transform: translateY(50%);
   row-gap: 2.4rem;
+
+  @include medium {
+    grid-template-columns: 1fr;
+    margin-top: -36rem;
+    transform: translateY(50%);
+  }
 }

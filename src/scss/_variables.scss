@@ -66,3 +66,21 @@ $shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
   font-size: $fsz-s;
   line-height: $lh-s;
 }
+
+@mixin small {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: 900px) {
+    @content;
+  }
+}

@@ -48,12 +48,48 @@
     background: $blue;
     background-image: url("../../assets/home/bg-pattern-pricing.svg");
     background-position: bottom;
+    background-repeat: no-repeat;
 
     .card__title,
     .price,
     .price__description,
     .card__list-item {
       color: $wight;
+    }
+  }
+
+  @include medium {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 4.8rem 6.8rem 4.8rem 4.8rem;
+    height: 31.6rem;
+
+    &__header {
+      text-align: left;
+    }
+
+    &__title {
+      margin-bottom: 1.6rem;
+    }
+
+    button {
+      position: absolute;
+      left: 4.8rem;
+      bottom: 4.8rem;
+    }
+
+    &__footer {
+      display: grid;
+      align-items: center;
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      background-position: right 8rem center;
     }
   }
 }

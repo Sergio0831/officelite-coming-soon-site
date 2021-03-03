@@ -1,6 +1,4 @@
 .section {
-  position: relative;
-  height: 100%;
   background: $very-light-gray;
 
   .outer-container {
@@ -8,14 +6,21 @@
     background-position: bottom 10rem right -35rem;
     background-size: 80%;
     background-repeat: no-repeat;
+
+    @include large {
+      background-position: bottom 10rem right -41rem;
+      background-size: 100%;
+    }
   }
 
   &__content {
-    column-gap: 9.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 21rem;
 
-    &-text {
-      max-width: 54rem;
+    @include large {
+      padding-top: 20rem;
     }
   }
 
@@ -23,6 +28,11 @@
     @include H1;
 
     color: $dark-gray;
+
+    @include large {
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
   }
 
   &__content-p {
@@ -30,6 +40,12 @@
 
     padding: 2.4rem 0 3.2rem;
     color: $gray;
+
+    @include large {
+      padding: 2.4rem 0;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
   }
 
   a {
@@ -37,8 +53,6 @@
   }
 
   &__content-image {
-    width: 100%;
-
     img {
       width: 100%;
       height: auto;

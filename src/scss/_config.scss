@@ -38,6 +38,14 @@ main {
   padding: 0 1rem;
   width: 100%;
   max-width: 112rem;
+
+  @include large {
+    padding: 0 4rem;
+  }
+
+  @include large {
+    padding: 0 2.4rem;
+  }
 }
 
 .row {

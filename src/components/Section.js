@@ -8,13 +8,13 @@ const Section = () => {
   return (
     <section className="section">
       <div className="outer-container">
-        <div className="section__content row inner-container">
+        <div className="section__content inner-container">
           <div className="section__content-text">
             <TextContent
               heading="A simple solution to complex tasks is coming soon"
               paragraph="Say goodbye to inefficient juggling of multiple apps, teams, and
-        projects. Officelite is the new collaboration platform built with an
-        intuitive interface to improve productivity."
+            projects. Officelite is the new collaboration platform built with an
+            intuitive interface to improve productivity."
             />
             <Link to="/signup" className="btn-1">
               Get Started

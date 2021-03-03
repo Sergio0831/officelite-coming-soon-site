@@ -25,5 +25,25 @@
 
       font-weight: $fw-bold;
     }
+
+    @include small {
+      padding: 1rem 0;
+
+      h3 {
+        font-size: 3.2rem;
+        line-height: $lh-m;
+      }
+
+      span {
+        font-size: 1.2rem;
+        line-height: $lh-s;
+      }
+    }
+  }
+
+  @include small {
+    &__content {
+      margin-top: 1.8rem;
+    }
   }
 }
