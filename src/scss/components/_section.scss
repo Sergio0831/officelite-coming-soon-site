@@ -58,8 +58,14 @@
     height: 531px;
     transform: translate(0, 4rem);
 
+    @include medium {
+      width: 28rem;
+      height: auto;
+    }
+
     @include small {
       width: 17rem;
+      height: auto;
     }
   }
 
