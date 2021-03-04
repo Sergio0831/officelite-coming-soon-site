@@ -9,7 +9,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 21rem;
+    padding-top: 17rem;
 
     @include large {
       padding-top: 20rem;
@@ -53,14 +53,13 @@
     box-shadow: 0 2.4rem 2.4rem -1rem rgba(63, 91, 194, 0.24716);
   }
 
-  &__content-image {
-    img {
-      width: 100%;
-      height: auto;
+  img {
+    justify-self: end;
+    height: 531px;
+    transform: translate(0, 4rem);
 
-      @include small {
-        width: 17rem;
-      }
+    @include small {
+      width: 17rem;
     }
   }
 

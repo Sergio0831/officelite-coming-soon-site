@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import charts from "../assets/home/charts.svg";
+import charts from "../assets/home/illustration-charts.svg";
 import Pricing from "./Pricing";
 import TextContent from "./TextContent";
 
@@ -20,9 +20,7 @@ const Section = () => {
               Get Started
             </Link>
           </div>
-          <div className="section__content-image">
-            <img src={charts} alt="Charts" />
-          </div>
+          <img src={charts} alt="Charts" />
         </div>
       </div>
       <Pricing />

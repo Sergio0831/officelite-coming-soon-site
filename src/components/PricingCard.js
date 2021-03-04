@@ -12,7 +12,7 @@ const PricingCard = (props) => {
   return (
     <div className="card">
       <div className="card__header">
-        <h4 className="card__title">{title}</h4>
+        <p className="card__title">{title}</p>
         <div className="card__price">
           <h2 className="price">{price}</h2>
           <p className="price__description">{priceDescription}</p>
