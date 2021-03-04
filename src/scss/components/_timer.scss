@@ -7,10 +7,10 @@
 
   &__content {
     display: flex;
-    column-gap: 1.6rem;
   }
 
   &__box {
+    margin-right: 1.6rem;
     border-radius: 1.3rem;
     padding: 1.7rem 0;
     width: 10rem;
@@ -27,6 +27,7 @@
     }
 
     @include small {
+      margin-right: 1.3rem;
       padding: 1rem 0;
       width: 7.2rem;
 

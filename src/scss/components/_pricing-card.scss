@@ -1,6 +1,7 @@
 .card {
   border-radius: 1.3rem;
   padding: 4rem 0;
+  min-height: 50.8rem;
   box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.24716);
   text-align: center;
   background: $wight;
@@ -63,7 +64,7 @@
     display: flex;
     justify-content: space-between;
     padding: 4.8rem 6.8rem 4.8rem 4.8rem;
-    height: 31.6rem;
+    min-height: 31.6rem;
 
     &__header {
       text-align: left;
@@ -96,7 +97,7 @@
   @include small {
     flex-direction: column;
     padding: 4rem 5rem;
-    height: auto;
+    min-height: 50.8rem;
 
     &__header {
       text-align: center;

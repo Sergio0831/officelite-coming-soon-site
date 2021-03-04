@@ -31,6 +31,10 @@
   }
 
   @include large {
-    margin: 0 auto;
+    margin: 10rem auto 0;
+  }
+
+  @include small {
+    margin: 6.4rem auto 0;
   }
 }
