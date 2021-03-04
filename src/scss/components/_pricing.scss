@@ -11,4 +11,9 @@
     margin-top: -36rem;
     transform: translateY(50%);
   }
+
+  @include small {
+    margin-top: -67rem;
+    transform: translateY(50%);
+  }
 }

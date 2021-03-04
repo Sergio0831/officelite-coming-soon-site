@@ -28,6 +28,7 @@
 
     @include small {
       padding: 1rem 0;
+      width: 7.2rem;
 
       h3 {
         font-size: 3.2rem;
@@ -38,6 +39,10 @@
         font-size: 1.2rem;
         line-height: $lh-s;
       }
+    }
+
+    @include xsmall {
+      width: 6rem;
     }
   }
 

@@ -91,4 +91,8 @@ main {
       background-size: 110rem 110rem;
     }
   }
+
+  @media (min-height: 1030px) {
+    height: 100vh;
+  }
 }

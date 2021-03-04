@@ -21,4 +21,10 @@
       row-gap: 4.8rem;
     }
   }
+
+  @include small {
+    &__content {
+      padding-top: 90rem;
+    }
+  }
 }

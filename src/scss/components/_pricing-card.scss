@@ -92,4 +92,32 @@
       background-position: right 8rem center;
     }
   }
+
+  @include small {
+    flex-direction: column;
+    padding: 4rem 5rem;
+    height: auto;
+
+    &__header {
+      text-align: center;
+    }
+
+    button {
+      position: static;
+      margin: 0 auto;
+      width: 17rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+    }
+
+    &__price {
+      margin-bottom: 5.6rem;
+    }
+
+    ul {
+      margin-bottom: 3.2rem;
+    }
+  }
 }

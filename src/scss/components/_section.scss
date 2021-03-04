@@ -1,17 +1,9 @@
 .section {
   background: $very-light-gray;
-
-  .outer-container {
-    background-image: url("../../assets/home/bg-pattern-header.svg");
-    background-position: bottom 10rem right -35rem;
-    background-size: 80%;
-    background-repeat: no-repeat;
-
-    @include large {
-      background-position: bottom 10rem right -41rem;
-      background-size: 100%;
-    }
-  }
+  background-image: url("../../assets/home/bg-pattern-header.svg");
+  background-position: bottom 10rem right -35rem;
+  background-size: 80%;
+  background-repeat: no-repeat;
 
   &__content {
     display: grid;
@@ -21,6 +13,15 @@
 
     @include large {
       padding-top: 20rem;
+    }
+
+    @include small {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      padding-top: 15.6rem;
+      text-align: center;
+      row-gap: 6.4rem;
     }
   }
 
@@ -56,6 +57,19 @@
     img {
       width: 100%;
       height: auto;
+
+      @include small {
+        width: 17rem;
+      }
     }
+  }
+
+  @include large {
+    background-position: right -20rem top -20rem;
+  }
+
+  @include small {
+    background-position: top -13rem right;
+    background-size: 100%;
   }
 }
