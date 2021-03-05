@@ -4,6 +4,7 @@
   max-width: 46rem;
   box-shadow: $shadow;
   background: $wight;
+  animation: moveFromRight 1s ease-out;
 
   input {
     @include body-2;
@@ -36,5 +37,17 @@
 
   @include small {
     margin: 6.4rem auto 0;
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translate(20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }

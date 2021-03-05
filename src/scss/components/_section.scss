@@ -10,6 +10,11 @@
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 17rem;
+    backface-visibility: hidden;
+
+    &-text {
+      animation: moveInLeft 1s ease-out;
+    }
 
     @include large {
       padding-top: 20rem;
@@ -57,6 +62,7 @@
     justify-self: end;
     height: 531px;
     transform: translate(0, 4rem);
+    animation: moveInRight 1s ease-out;
 
     @include medium {
       width: 28rem;
@@ -76,5 +82,29 @@
   @include small {
     background-position: top -13rem right;
     background-size: 100%;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(20rem, 4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 4rem);
   }
 }
