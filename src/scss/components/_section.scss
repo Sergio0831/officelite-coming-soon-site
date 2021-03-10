@@ -6,13 +6,13 @@
   background-repeat: no-repeat;
 
   &__content {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 21rem;
+    padding-top: 17rem;
     backface-visibility: hidden;
 
     &-text {
+      max-width: 54rem;
       animation: moveInLeft 1s ease-out;
     }
 
@@ -59,9 +59,7 @@
   }
 
   img {
-    justify-self: end;
-    height: 531px;
-    transform: translate(0, 4rem);
+    transform: translate(70px, 33px);
     animation: moveInRight 1s ease-out;
 
     @include medium {
@@ -100,11 +98,11 @@
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translate(20rem, 4rem);
+    transform: translateX(20rem);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0, 4rem);
+    transform: translateX(0);
   }
 }
