@@ -1,8 +1,8 @@
 .section {
   background: $very-light-gray;
   background-image: url("../../assets/home/bg-pattern-header.svg");
-  background-position: top -55rem right -55rem;
-  background-size: 100%;
+  background-position: top -43rem right -13rem;
+  background-size: 60%;
   background-repeat: no-repeat;
 
   &__content {
@@ -24,7 +24,7 @@
       display: flex;
       flex-wrap: wrap-reverse;
       justify-content: center;
-      padding-top: 15.6rem;
+      padding-top: 22rem;
       text-align: center;
       row-gap: 6.4rem;
     }
