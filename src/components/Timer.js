@@ -9,7 +9,7 @@ const Timer = ({ titlecolor, boxcolor, spancolor, color }) => {
   let interval = useRef(false);
 
   const startTimer = () => {
-    const countDate = new Date("May 22, 2021 00:00:00").getTime();
+    const countDate = new Date("Nov 4, 2021 00:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -43,35 +43,35 @@ const Timer = ({ titlecolor, boxcolor, spancolor, color }) => {
 
   return (
     <>
-      <div className="timer">
-        <h3 className="timer__title">
+      <div className='timer'>
+        <h3 className='timer__title'>
           <span style={{ color: titlecolor }}>Coming</span> 4 Nov 2021
         </h3>
-        <div className="timer__content">
+        <div className='timer__content'>
           <div
             style={{ backgroundColor: boxcolor }}
-            className="timer__box days"
+            className='timer__box days'
           >
             <h3 style={{ color: color }}>{days}</h3>
             <span style={{ color: spancolor }}>days</span>
           </div>
           <div
             style={{ backgroundColor: boxcolor }}
-            className="timer__box hours"
+            className='timer__box hours'
           >
             <h3 style={{ color: color }}>{hours}</h3>
             <span style={{ color: spancolor }}>hours</span>
           </div>
           <div
             style={{ backgroundColor: boxcolor }}
-            className="timer__box minutes"
+            className='timer__box minutes'
           >
             <h3 style={{ color: color }}>{minutes}</h3>
             <span style={{ color: spancolor }}>min</span>
           </div>
           <div
             style={{ backgroundColor: boxcolor }}
-            className="timer__box seconds"
+            className='timer__box seconds'
           >
             <h3 style={{ color: color }}>{seconds}</h3>
             <span style={{ color: spancolor }}>sec</span>

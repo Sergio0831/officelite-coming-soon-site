@@ -1,4 +1,4 @@
-@use "./variables";
+@use "./variables" as *;
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: variables.$font-family;
+  font-family: $font-family;
 }
 
 a {
@@ -62,42 +62,42 @@ main {
   border: none;
   border-radius: 2.8rem;
   padding: 1.4rem 4rem;
-  font-family: variables.$font-family;
-  font-weight: variables.$fw-bold;
-  font-size: variables.$fsz-s;
-  line-height: variables.$lh-s;
+  font-family: $font-family;
+  font-weight: $fw-bold;
+  font-size: $fsz-s;
+  line-height: $lh-s;
   transition: $transition;
   cursor: pointer;
 }
 
 .btn-1 {
-  color: variables.$wight;
-  background: variables.$blue;
+  color: $wight;
+  background: $blue;
 
   &:hover {
-    background: variables.$light-blue;
+    background: $light-blue;
   }
 
   @extend .btn;
 }
 
 .btn-2 {
-  color: variables.$blue;
-  background: rgba(variables.$blue, 0.15);
+  color: $blue;
+  background: rgba($blue, 0.15);
 
   &:hover {
-    background: rgba(variables.$blue, 0.25);
+    background: rgba($blue, 0.25);
   }
 
   @extend .btn;
 }
 
 .btn-3 {
-  color: variables.$blue;
-  background: variables.$wight;
+  color: $blue;
+  background: $wight;
 
   &:hover {
-    color: variables.$light-blue;
+    color: $light-blue;
   }
 
   @extend .btn;
